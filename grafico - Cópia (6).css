@@ -1,0 +1,344 @@
+/* Estilos para o canvas do gráfico */
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+header .logo
+{
+ color:rgb(0, 0, 0);
+ font-weight: 700;
+ text-decoration: none;
+ font-size: 2em;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ transition: .4s;
+}
+header ul
+{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-family: 'Poppins', sans-serif;
+}
+header ul
+{
+  list-style: none;
+  margin-left: 10px;
+}
+header ul li a
+{
+  text-decoration: none;
+  padding: 5px 15px;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+  background: rgb(235, 200, 42, 0.877);
+  color: rgb(0, 0, 0);
+}
+section
+{
+  width: 150%;
+  background: rgb(0, 0, 0);
+  background-position:10% 5% ;
+  height: 10px;
+  padding:100px;
+  transform: translateY(800px);
+  align-items: center;
+}
+#text
+{
+  position: absolute;
+  color: rgba(0, 0, 0, 1);
+  white-space: nowrap;
+  font-size: 7.5vw;
+  font-size: 1.5em;
+}
+.city {
+    background-color: rgba(0, 0, 0, 1);
+    color: rgb(0, 0, 0);
+    border: 2px solid brown;
+    margin: 25%;
+    padding:2%;
+    position:absolute;
+  }
+  .MYX{
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position:left bottom;
+  }
+  
+.main {
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    padding: 50px 0;
+    display: grid;
+    place-items: center;
+}
+
+.main .heading {
+    font-size: 27px;
+    font-weight: 500;
+    color: brown;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.heading::after {
+    position: absolute;
+    content: ' ';
+    width: 50%;
+    height: 3px;
+    left: 50%;
+    bottom: -5px;
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+    transform: translateX(-50%);
+}
+
+.container {
+    width: 70%;
+    height: auto;
+    position: relative;
+}
+
+.container::after {
+    position: absolute;
+    content: ' ';
+    width: 2px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(0, 0, 0, 1));
+}
+
+.container ul {
+    list-style: none;
+}
+
+.container ul li {
+    width: 50%;
+    height: auto;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.384);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    z-index: 99;
+    position: relative;
+}
+
+.container ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    text-align: right;
+}
+
+.container ul li:nth-child(odd) .date {
+    right: 20px;
+}
+
+.container ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+}
+
+.container ul li:nth-child(4) {
+    margin-bottom: 0;
+}
+
+.container ul li .title {
+    font-size: 20px;
+    font-weight: 500;
+    color: brown;
+}
+
+ul li p{
+    font-size: 15px;
+    color: #444;
+    margin: 7px 0;
+    line-height: 23px;
+}
+
+ul li a {
+    font-size: 15px;
+    color: brown;
+    text-decoration: none;
+}
+
+ul li .date {
+    position: absolute;
+    top: -40px;
+    width: 135px;
+    height: 35px;
+    border-radius: 20px;
+    color: #fff;
+    background-image: linear-gradient(to right, brown, brown);
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+}
+
+.container ul li .circle {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+}
+
+.container ul li .circle::after {
+    content: ' ';
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container ul li:nth-child(odd) .circle{
+    right: -30px;
+    transform: translate(50%, -50%);
+}
+
+.container ul li:nth-child(even) .circle{
+    left: -30px;
+    transform: translate(-50%, -50%);
+}
+
+/* Responsividade do elemento */
+@media screen and (max-width:1224px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:933px) {
+    .container {
+        width: 80%;
+        transform: translateX(15px);
+    }
+
+    .container ul::after {
+        left: -30px;
+    }
+    
+    .container ul li {
+        width: 100%;
+        float: none;
+        clear: none;
+        margin-bottom: 80px;
+    }
+
+    .container ul li:nth-child(odd) {
+        transform: translateX(0);
+        text-align: left;
+
+    }
+
+    .container ul li:nth-child(odd) .date {
+        left: 20px;
+    }
+
+    .container ul li:nth-child(odd) .circle {
+        left: -30px;
+        transform: translate(-50%, -50%);
+    }
+
+    .container ul li:nth-child(even) {
+        transform: translateX(0);
+        
+    }
+}
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr {
+    background-color: #ddcf0dd2;
+    opacity: 0.9;
+    border: 1px solid #000000;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+    
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  
+  /* general styling */
+  body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+  }
