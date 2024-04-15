@@ -68,3 +68,261 @@ html{
     padding: 50px;
     font-size: 2rem;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+ }
+ 
+ body {
+     font-family: "Neue Montreal";
+ }
+ 
+ img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+ 
+ /* cabeçalho */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    text-decoration: none;
+    z-index: 3;
+}
+ 
+nav a {
+    transition: .5s;
+    color: rgb(255, 255, 255);
+    padding: 6px 20px;
+}
+
+nav a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .5s;
+    z-index: 3;
+}
+ 
+nav a:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+ .links {
+     display: flex;
+     gap: 3em;
+ }
+ 
+ a {
+     text-decoration: none;
+     color: #000;
+ }
+ 
+ footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+ .hero {
+     width: 100%;
+     position: absolute;
+     top: 45%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     z-index: -1;
+ }
+ 
+ /* Titulo */
+ h1 {
+     font-size: 240px;
+     letter-spacing: -0.05em;
+ 
+     /* animação */
+     background: linear-gradient(45deg, #fcecc1, #fff8e4, #f3e5bd, #fcfbf7e6);
+     background-size: 400% 100%;
+     animation: degrade 10s linear infinite alternate;
+ 
+     /* animação no texto */
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }
+ 
+ h1 {
+     font-size: 240px;
+     transition: 0.8s;
+     letter-spacing: -0.05em;
+ }
+ h1:hover {
+     -webkit-text-stroke: 2.5px #fff0b6;
+     color: transparent;
+ }
+ 
+ @keyframes degrade {
+     0% {
+         background-position-x: 0%;
+     }
+ 
+     100% {
+         background-position: 400%;
+     }
+ }
+ 
+ footer a {
+    color: #fff;
+    font-size: 20px;
+}
+ 
+ 
+ p {
+     font-size: 1.5vw;
+     color: #fff;
+     opacity: 0.9;
+ }
+ 
+ .btn {
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffd012;
+    color: #fff5e5;
+    font-size: 18px;
+    border-radius: 26px;
+    padding: 17px 28px;
+    cursor: pointer;
+    z-index: 2;
+    text-transform: uppercase;
+}
+ 
+.img-gallery-container {
+    width: 100vw;
+    padding-top: 100vh;
+    z-index: -1;
+}
+ 
+ .img {
+     position: relative;
+     margin-bottom: 1em;
+     width: 400px;
+     height: 500px;
+     overflow: hidden;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
+ 
+ .img:nth-child(1),
+ .img:nth-child(3),
+ .img:nth-child(5),
+ .img:nth-child(7),
+ .img:nth-child(9),
+ .img:nth-child(11) {
+     left: 75%;
+ }
+ 
+ .img:nth-child(2),
+ .img:nth-child(4),
+ .img:nth-child(6),
+ .img:nth-child(8),
+ .img:nth-child(10),
+ .img:nth-child(12) {
+     left: 25%;
+ }
+ 
+ .img.reorder {
+     position: absolute;
+     top: 47.5%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 250px;
+     height: 325px;
+ }
+ 
+ .img.reorder .card :nth-child(1) {
+     transform: translate(-50%, -50%) rotate(10deg);
+ }
+ 
+ .img.reorder .card:nth-child(2) {
+     transform: translate(-50%, -50%) rotate(-5deg);
+ }
+ 
+ .img.reorder:nth-child(3) {
+     transform: translate(-50%, -50%) rotate(2deg);
+ }
+ 
+ .img.reorder:nth-child(4) {
+     transform: translate(-50%, -50%) rotate(-2deg);
+ }
+ 
+ 
+ /* video */
+ .background-clip {
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     z-index: -1;
+     width: 100%;
+     height: footer;
+     justify-content: center;
+     display: cover;
+     opacity: 0.94;
+ }
+
+ /* sessao dos cards */
+
+ 
+ .top{
+    max-width: 100%;
+    flex-wrap: wrap;
+    z-index: 1;
+ }
+
+ .top .card{
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px #000000;
+    border-radius: 15px;
+    background-color: #adabab;
+    overflow: hidden;
+    border-top: 1px solid #8b8b8b;
+    border-left: 1px solid #757575;
+}
+
+.top .card .card-content{
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.top .card:hover .card-content{
+    transform: translateY(0px);
+    opacity: 1;
+}
