@@ -73,7 +73,7 @@ section
 .main {
     width: 100%;
     height: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     font-family: 'Poppins', sans-serif;
     padding: 50px 0;
     display: grid;
@@ -83,7 +83,7 @@ section
 .main .heading {
     font-size: 27px;
     font-weight: 500;
-    color: #0000ff;
+    color: #daa520;
     position: relative;
     margin-bottom: 80px;
 }
@@ -121,7 +121,7 @@ section
     width: 50%;
     height: auto;
     padding: 15px 20px;
-    background-color: #fff;
+    background-color: #000000;
     box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.384);
     border-radius: 10px;
     margin-bottom: 30px;
@@ -153,7 +153,7 @@ section
 .container ul li .title {
     font-size: 20px;
     font-weight: 500;
-    color: #0000ff;
+    color:#daa520 ;
 }
 
 ul li p{
@@ -195,7 +195,7 @@ ul li .date {
     content: ' ';
     width: 15px;
     height: 15px;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgb(255, 255, 255);
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -272,7 +272,7 @@ table {
   }
   
   table tr {
-    background-color: #ddcf0dd2;
+    background-color:#daa520 ;
     opacity: 0.9;
     border: 1px solid #000000;
     padding: .35em;
@@ -311,13 +311,13 @@ table {
     }
     
     table tr {
-      border-bottom: 3px solid #ddd;
+      border-bottom: 3px solid #000000;
       display: block;
       margin-bottom: .625em;
     }
     
     table td {
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #000000;
       display: block;
       font-size: .8em;
       text-align: right;
